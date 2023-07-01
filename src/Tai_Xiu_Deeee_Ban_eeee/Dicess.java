@@ -5,11 +5,9 @@ import java.util.Random;
 public class Dicess {
 	private int[] probabilities = {1,2,3,4,5,6};
 	private int[] weight = {16,16,16,16,16,16};
-	private int biggest_weight;
 	
 	public Dicess(int biggest_weight) {
 		super();
-		this.biggest_weight = biggest_weight;
 		this.weight[biggest_weight] = 20;
 	}
 	

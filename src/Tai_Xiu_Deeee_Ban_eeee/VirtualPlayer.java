@@ -12,7 +12,7 @@ public class VirtualPlayer extends Player {
 	}
 	@Override
 	public String toString() {
-		return "VirtualPlayer [name =" + this.getName() + " ,score=" + this.getScore() +  " ,emotion=" + emotion + "]";
+		return emotion;
 	}
 
 }

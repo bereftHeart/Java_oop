@@ -4,33 +4,33 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.paint.Color?>
-<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.LinearGradient?>
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="320.0" prefWidth="480.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Tai_Xiu_Deeee_Ban_eeee.Start_Controller">
+<Pane maxHeight="320.0" maxWidth="480.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="320.0" prefWidth="480.0" style="-fx-background-opacity: 0.5;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Tai_Xiu_Deeee_Ban_eeee.Start_Controller">
    <children>
-      <Label layoutX="148.0" layoutY="65.0" text="Dice Game">
+      <Button layoutX="213.0" layoutY="160.0" minWidth="60.0" mnemonicParsing="false" onAction="#next" prefHeight="36.0" style="-fx-background-radius: 12;" text="Start" />
+      <Label layoutX="97.0" layoutY="70.0" text="DICE GAME">
          <font>
-            <Font name="Broadway" size="32.0" />
+            <Font name="Broadway" size="48.0" />
          </font>
          <textFill>
-            <RadialGradient centerX="0.48895027624309395" centerY="0.5" cycleMethod="REFLECT" radius="0.2011494252873563">
+            <LinearGradient cycleMethod="REFLECT" endX="1.0" endY="1.0">
                <stops>
                   <Stop>
                      <color>
-                        <Color red="1.0" />
+                        <Color red="0.018518518656492233" green="1.0" blue="0.08395061641931534" />
                      </color>
                   </Stop>
                   <Stop offset="1.0">
                      <color>
-                        <Color red="0.06666667014360428" blue="1.0" />
+                        <Color green="0.03333333507180214" blue="1.0" />
                      </color>
                   </Stop>
                </stops>
-            </RadialGradient>
+            </LinearGradient>
          </textFill>
       </Label>
-      <Button fx:id="next" layoutX="214.0" layoutY="212.0" mnemonicParsing="false" onAction="#next" text="Next" />
    </children>
 </Pane>

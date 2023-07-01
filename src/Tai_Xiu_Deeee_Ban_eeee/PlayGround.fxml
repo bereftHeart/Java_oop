@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Tai_Xiu_Deeee_Ban_eeee.Play_Controller">
+   <top>
+      <VBox alignment="TOP_CENTER" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="player3" text="Label" textFill="#ff00d4">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="8.0" top="8.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets left="12.0" right="12.0" />
+               </padding>
+            </Label>
+            <Label fx:id="playerScore3" text="Score: 0" textFill="RED">
+               <padding>
+                  <Insets left="8.0" right="8.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets bottom="12.0" />
+               </VBox.margin>
+            </Label>
+         </children>
+      </VBox>
+   </top>
+   <left>
+      <VBox alignment="CENTER_LEFT" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="player2" text="Label" textFill="RED">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets left="12.0" right="12.0" />
+               </padding>
+            </Label>
+            <Label fx:id="playerScore2" alignment="CENTER" maxWidth="1.7976931348623157E308" text="Score: 0" textFill="RED">
+               <VBox.margin>
+                  <Insets top="8.0" />
+               </VBox.margin>
+            </Label>
+         </children>
+      </VBox>
+   </left>
+   <right>
+      <VBox alignment="CENTER_RIGHT" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="player4" text="Label" textFill="#ffed00">
+               <padding>
+                  <Insets left="12.0" right="12.0" />
+               </padding>
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="playerScore4" alignment="CENTER" maxWidth="1.7976931348623157E308" text="Score: 0" textFill="RED">
+               <VBox.margin>
+                  <Insets top="8.0" />
+               </VBox.margin>
+            </Label>
+         </children>
+      </VBox>
+   </right>
+   <bottom>
+      <VBox alignment="BOTTOM_CENTER" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="player1" text="Label" textFill="#00ff07">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <padding>
+                  <Insets left="12.0" right="12.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets bottom="8.0" top="8.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="playerScore1" text="Score: 0" textFill="RED">
+               <padding>
+                  <Insets left="8.0" right="8.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets bottom="12.0" />
+               </VBox.margin>
+            </Label>
+         </children>
+      </VBox>
+   </bottom>
+   <center>
+      <VBox alignment="CENTER" prefHeight="320.0" prefWidth="400.0" spacing="12.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="nextPlayerLabel" text="Click the button below to start">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <StackPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <ImageView fx:id="imageBowl" fitHeight="200.0" fitWidth="200.0" onMouseClicked="#openBowl" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@bowl.jpg" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="CLOSED_HAND" />
+                     </cursor>
+                  </ImageView>
+                  <ImageView fx:id="imageDice" fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@side1.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </StackPane>
+            <Button fx:id="btnRoll" alignment="CENTER" mnemonicParsing="false" onAction="#rollDice" style="-fx-background-radius: 12;" text="START" textFill="BLUE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="12.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="4.0" left="16.0" right="16.0" top="4.0" />
+               </padding>
+            </Button>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
