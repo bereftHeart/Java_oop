@@ -1,7 +1,8 @@
 package datamodel;
 
-import java.util.List;
 import java.util.Map;
+
+import constant.constants;
 
 public class RelicEntity extends baseEntity {
 
@@ -10,20 +11,20 @@ public class RelicEntity extends baseEntity {
 		// TODO Auto-generated constructor stub
 	}
 
-	public RelicEntity(String name, Map<String, String> additionalInfo) {
-		super(name, additionalInfo);
-		// TODO Auto-generated constructor stub
+	public RelicEntity(String name, Map<String, String> additionalInfo, String description ) {
+		super(name, additionalInfo, description);
+	}
+	public RelicEntity(String name, Map<String, String> additionalInfo, String description, String url ) {
+		super(name, additionalInfo, description);
+		setRootURL(url);
+	}
+	public String getType() {
+		return constants.RELIC_ENTITY;
 	}
 
-	public RelicEntity(String name, String description, Map<String, String> additionalInfo,
-			List<String> relatedEntityIds, String rootURL) {
-		super(name, description, additionalInfo, relatedEntityIds, rootURL);
-		// TODO Auto-generated constructor stub
+	@Override
+	public String toString() {
+		return "RelicEntity [id=" + id + ", name=" + name + ", description=" + description + ", additionalInfo="
+				+ additionalInfo + ", relatedEntityIds=" + relatedEntityIds + ", rootURL=" + rootURL + "]";
 	}
-
-	public RelicEntity(String name, String description, Map<String, String> additionalInfo) {
-		super(name, description, additionalInfo);
-		// TODO Auto-generated constructor stub
-	}
-
 }

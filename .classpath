@@ -6,8 +6,9 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="F:/javafx_SDK/jsoup/jsoup-1.16.1.jar"/>
-	<classpathentry kind="lib" path="F:/2022-2/oop_/project/Mã nguồn chương trình/HistoryArchive-final/libs/json-20220924.jar"/>
-	<classpathentry kind="lib" path="F:/2022-2/oop_/project/Mã nguồn chương trình/HistoryArchive-final/libs/json-simple-2.1.2.jar"/>
+	<classpathentry kind="lib" path="F:/user/2022-2/oop_/project/Mã nguồn chương trình/HistoryArchive-final/libs/json-20220924.jar"/>
+	<classpathentry kind="lib" path="F:/user/2022-2/oop_/project/Mã nguồn chương trình/HistoryArchive-final/libs/json-simple-2.1.2.jar"/>
+	<classpathentry kind="lib" path="F:/user/2022-2/oop_/project/Mã nguồn chương trình/HistoryArchive-final/libs/jsoup-1.15.3.jar"/>
+	<classpathentry kind="lib" path="F:/system/Java/Jsoup/jsoup-1.16.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

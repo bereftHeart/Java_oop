@@ -8,9 +8,10 @@ public class constants {
 	public final static String BASE_ENTITY = "BaseEntity";
 	public final static String CHARACTER_ENTITY = "CharacterEntity";
 	public final static String DYNASTY_ENTITY = "DynastyEntity";
+	public final static String TOURIST_ENTITY = "TouristDestinationEntity";
 	public final static String EVENT_ENTITY = "EventEntity";
 	public final static String FESTIVAL_ENTITY = "FestivalEntity";
-	public final static String RELIC_PLACE_ENTITY = "RelicPlaceEntity";
+	public final static String RELIC_ENTITY = "RelicPlaceEntity";
 	public final static String UNDEFINED_ENTITY = "UndefinedEntity";
 //	Entity properties
 	public final static String ENTITY_ID = "Id";

@@ -67,7 +67,7 @@ public class baseEntity {
 	public String getType() {
 		return constants.BASE_ENTITY;
 	}
-	
+//	constructor
 	public baseEntity() {
 		this.id=UUID.randomUUID().toString();
 		this.additionalInfo= new HashMap<String, String>();
@@ -75,27 +75,18 @@ public class baseEntity {
 		this.description = "none";
 	}
 
-	public baseEntity(String name, String description, Map<String, String> additionalInfo) {
-		super();
-		this.name = name;
-		this.description = description;
-		this.additionalInfo = additionalInfo;
-	}
-
 	public baseEntity(String name, Map<String, String> additionalInfo) {
-		super();
+		this();
+		
 		this.name = name;
-		this.additionalInfo = additionalInfo;
+		this.additionalInfo= additionalInfo;
 	}
-
-	public baseEntity(String name, String description, Map<String, String> additionalInfo,
-			List<String> relatedEntityIds, String rootURL) {
-		super();
+	public baseEntity(String name, Map<String, String> additionalInfo, String description ) {
+		this();
+		
+		this.description = description;	
 		this.name = name;
-		this.description = description;
-		this.additionalInfo = additionalInfo;
-		this.relatedEntityIds = relatedEntityIds;
-		this.rootURL = rootURL;
+		this.additionalInfo= additionalInfo;
 	}
 	public JSONObject toJsonObject() {
 		JSONObject jsonObject = new JSONObject();

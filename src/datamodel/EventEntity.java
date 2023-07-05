@@ -1,7 +1,8 @@
 package datamodel;
 
-import java.util.List;
 import java.util.Map;
+
+import constant.constants;
 
 public class EventEntity extends baseEntity {
 
@@ -10,20 +11,16 @@ public class EventEntity extends baseEntity {
 		// TODO Auto-generated constructor stub
 	}
 
-	public EventEntity(String name, Map<String, String> additionalInfo) {
-		super(name, additionalInfo);
-		// TODO Auto-generated constructor stub
+	public EventEntity(String name, Map<String, String> additionalInfo, String description ) {
+		super(name, additionalInfo, description);
 	}
-
-	public EventEntity(String name, String description, Map<String, String> additionalInfo,
-			List<String> relatedEntityIds, String rootURL) {
-		super(name, description, additionalInfo, relatedEntityIds, rootURL);
-		// TODO Auto-generated constructor stub
+	public EventEntity(String name, Map<String, String> additionalInfo, String description, String url ) {
+		super(name, additionalInfo, description);
+		this.setRootURL(url);
 	}
-
-	public EventEntity(String name, String description, Map<String, String> additionalInfo) {
-		super(name, description, additionalInfo);
-		// TODO Auto-generated constructor stub
+	
+	public String getType() {
+		return constants.EVENT_ENTITY;
 	}
 
 }
