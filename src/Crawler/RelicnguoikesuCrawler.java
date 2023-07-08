@@ -16,7 +16,7 @@ public class RelicnguoikesuCrawler extends AbstractCrawler {
 		// TODO Auto-generated method stub
 		int MAX_PAGE = 20;
 		int STEP_PAGE = 10;
-		LinkedList<Object> crawler = new LinkedList<>();
+		crawler = new LinkedList<>();
 		String ROOT_URL = "https://nguoikesu.com"; // root url
 		for (int i=0; i<=MAX_PAGE; i+=STEP_PAGE) {
 			try {
@@ -60,14 +60,14 @@ public class RelicnguoikesuCrawler extends AbstractCrawler {
 		}
 	}
 //	test
-	public static void main(String[] args) throws Exception {
-		RelicnguoikesuCrawler crawler = new RelicnguoikesuCrawler();
-		try {
-			crawler.start();
-			
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
+//	public static void main(String[] args) throws Exception {
+//		RelicnguoikesuCrawler crawler = new RelicnguoikesuCrawler();
+//		try {
+//			crawler.start();
+//			
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//		}
+//	}
 
 }

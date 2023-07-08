@@ -1,4 +1,5 @@
 package datamodel;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.List;
@@ -16,6 +17,7 @@ public class baseEntity {
 	protected List<String> relatedEntityIds;
 	protected String rootURL;
 	
+//	getters and setters
 	public String getId() {
 		return id;
 	}
@@ -88,7 +90,8 @@ public class baseEntity {
 		this.name = name;
 		this.additionalInfo= additionalInfo;
 	}
-	public JSONObject toJsonObject() {
+//	convert to JSONobject
+	public JSONObject toJsonObject() throws JSONException {
 		JSONObject jsonObject = new JSONObject();
 		jsonObject.put(constants.ENTITY_ID,this.getId());
 		jsonObject.put(constants.ENTITY_NAME,this.getName());
@@ -98,5 +101,15 @@ public class baseEntity {
 		jsonObject.put(constants.ENTITY_TYPE,this.getType());
 		jsonObject.put(constants.ENTITY_ROOT_URL,this.getRootURL());
 		return jsonObject;
+	}
+//	add relevent
+	public void addRelevent(String id) {
+		if(!this.relatedEntityIds.contains(id))
+			this.relatedEntityIds.add(id);
+	}
+
+// paternity test 
+	public boolean isContained(String text) {
+		return this.getName().contains(text) || this.getAdditionalInfo().values().toString().contains(text) || this.getDescription().contains(text);  
 	}
 }

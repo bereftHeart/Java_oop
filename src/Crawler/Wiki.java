@@ -164,30 +164,30 @@ public class Wiki {
 			switch (type) {
 			case "d1":
 			case "p":
-				description.append(" " + childText+"\n\n");
+				description.append(" " + childText+"\n");
 				break;
 			case "table":
 				if (child.hasClass("cquote")) // quote character sayings
-            		description.append("  "+childText+"\n\n");
+            		description.append("  "+childText+"\n");
 				break;
 			case "h2":
 				if (j==numChildren-1 || children.get(j+1).tagName()=="h2") break;
 				h2_index++;
 				if (n)
 					child = child.selectFirst(".mw-headline");
-				description.append(h2_index+ ". "+ child.text()+ "\n\n");
+				description.append(h2_index+ ". "+ child.text()+ "\n");
 				h3_index=1;
 				break;
 			case "h3":
 				if (n)
 					child = child.selectFirst(".mw-headline");
-				description.append(h2_index+ ". " + h3_index + child.text()+ "\n\n");
+				description.append(h2_index+ ". " + h3_index + child.text()+ "\n");
 				h3_index++;
 				break;
 			case "ul":
 				if (child.classNames().size() == 0) {
 					for (Element e: child.select("li")) {
-						description.append(" + " + e.text() + "\n\n");
+						description.append(" + " + e.text() + "\n");
 					}
 				}
 				break;

@@ -13,7 +13,7 @@ import datamodel.RelicEntity;
 
 public class RelicWikiCrawler extends AbstractCrawler {
 	public void start() throws Exception{
-		LinkedList<Object> crawler = new LinkedList<>();
+		crawler = new LinkedList<>();
 		String rootURL = "https://vi.wikipedia.org";
 		String url = "https://vi.wikipedia.org/wiki/Danh_sách_Di_tích_quốc_gia_Việt_Nam";
 		Document doc = Wiki.getDocument(url); // connection to wikipedia
@@ -48,18 +48,16 @@ public class RelicWikiCrawler extends AbstractCrawler {
 //			System.out.println(crawler.get(crawler.size()-1).toString());
 			}
 		}
-		
-		
 	}
 	
 //	test
-	public static void main(String[] args) throws Exception {
-		RelicWikiCrawler crawler = new RelicWikiCrawler();
-		try {
-			crawler.start();
-			
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
+//	public static void main(String[] args) throws Exception {
+//		RelicWikiCrawler crawler = new RelicWikiCrawler();
+//		try {
+//			crawler.start();
+//			
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//		}
+//	}
 }
