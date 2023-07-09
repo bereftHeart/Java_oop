@@ -22,7 +22,7 @@ public class Feature_Engineering {
 	
 	public Feature_Engineering() {
 		allEntities = new HashMap<String, baseEntity>();
-		take_from_JSON();
+//		take_from_JSON();
 	}
 
 //	filter new entities that overlap with existing entities
@@ -133,27 +133,28 @@ public class Feature_Engineering {
 	}
 	
 //	take data from JSON file
-	public void take_from_JSON() {
-		this.allEntities = new HashMap<String, baseEntity>();
-		JSONParser parser = new JSONParser();
-		try { 
-			Object obj = parser.parse(new FileReader("F:\\\\user\\\\2022-2\\\\oop_\\\\project\\\\OOP_Project\\\\src\\\\JSON\\\\data.json"));
-	        JSONObject jsonObject = (JSONObject)obj;
-	        
-	        JSONArray entities = (JSONArray) jsonObject.get(constants.JSON_ENTITIES); 
-	        Iterator<JSONObject> iterator = ((List<JSONObject>) entities).iterator(); 
-	        
-	        while (iterator.hasNext()) {
-	        	JSONObject jObject = iterator.next();
-	        	baseEntity e = Feature_Engineering.parseToEntity(jObject);
-	        	allEntities.put(e.getId(), e);
-	        }
-	        
-			System.out.println("load data successfully!");
-	    } catch (Exception e) { 
-	        e.printStackTrace();
-	    }
-	}
+//	public void take_from_JSON() {
+//		this.allEntities = new HashMap<String, baseEntity>();
+//		@SuppressWarnings("deprecation")
+//		JSONParser parser = new JSONParser();
+//		try { 
+//			Object obj = parser.parse(new FileReader("F:\\\\user\\\\2022-2\\\\oop_\\\\project\\\\OOP_Project\\\\src\\\\JSON\\\\data.json"));
+//	        JSONObject jsonObject = (JSONObject)obj;
+//	        
+//	        JSONArray entities = (JSONArray) jsonObject.get(constants.JSON_ENTITIES); 
+//	        Iterator<JSONObject> iterator = ((List<JSONObject>) entities).iterator(); 
+//	        
+//	        while (iterator.hasNext()) {
+//	        	JSONObject jObject = iterator.next();
+//	        	baseEntity e = Feature_Engineering.parseToEntity(jObject);
+//	        	allEntities.put(e.getId(), e);
+//	        }
+//	        
+//			System.out.println("load data successfully!");
+//	    } catch (Exception e) { 
+//	        e.printStackTrace();
+//	    }
+//	}
 	
 //	save data to JSON
 	public void save_to_JSON() throws JSONException {
