@@ -51,7 +51,7 @@ public class RelicnguoikesuCrawler extends AbstractCrawler {
 				    String relicDescription = Wiki.getDescription(content, false);
 				    
 					crawler.add(new RelicEntity(relicName, relicAdditionalInfo, relicDescription, ROOT_URL));
-					System.out.println("+1 Relic from nguoikesu:");
+					System.out.println("+1 Relic from nguoikesu:" + relicName);
 //					System.out.println(crawler.get(crawler.size()-1).toString());
 				}
 			} catch (Exception e) {

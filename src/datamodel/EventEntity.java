@@ -23,4 +23,10 @@ public class EventEntity extends baseEntity {
 		return constants.EVENT_ENTITY;
 	}
 
+	@Override
+	public String toString() {
+		return "EventEntity [id=" + id + ", name=" + name + ", description=" + description + ", additionalInfo="
+				+ additionalInfo + ", relatedEntityIds=" + relatedEntityIds + ", rootURL=" + rootURL + "]";
+	}
+
 }

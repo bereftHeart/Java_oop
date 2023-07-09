@@ -5,6 +5,8 @@ import java.util.List;
 import org.json.JSONException;
 import Crawler.AbstractCrawler;
 import Crawler.FestivalWikiCrawler;
+import Crawler.RelicWikiCrawler;
+import Crawler.RelicnguoikesuCrawler;
 
 public class Data_Management {
 	List<AbstractCrawler> web_crawlers;
@@ -22,8 +24,8 @@ public class Data_Management {
 
 	public void add_web_crawler() {
 		this.web_crawlers.add(new FestivalWikiCrawler());
-//		this.web_crawlers.add(new RelicnguoikesuCrawler());
-//		this.web_crawlers.add(new RelicWikiCrawler());
+		this.web_crawlers.add(new RelicnguoikesuCrawler());
+		this.web_crawlers.add(new RelicWikiCrawler());
 	}
 	
 	public void crawl_raw_data() throws JSONException {

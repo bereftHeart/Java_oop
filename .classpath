@@ -9,5 +9,6 @@
 	<classpathentry kind="lib" path="F:/system/Java/Jsoup/jsoup-1.16.1.jar"/>
 	<classpathentry kind="lib" path="F:/system/Java/Java_Json/java-json.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/json"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/json_simple"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
